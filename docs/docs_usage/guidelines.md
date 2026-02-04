@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description lang=en": "Editorial rules for Voc4Cat vocabulary and terminology: labels, definitions, spelling, grammar, typography, and SKOS mappings. Learn more here."
+---
+
 # Guidelines for Voc4Cat
 
 The Voc4Cat guidelines have been developed as a blueprint for
@@ -17,6 +23,11 @@ over the course of *Task Area 1 (TA1): Ontology Development and Metadata
 Standards* of NFDI4Cat.
 
 Please note that all language dependent parts refer to only the default language (British English).
+
+:::{tip}
+In addition to this guidelines page, we also provide the page **[organization of concepts](organizing-concepts.md)**
+that explains Voc4Cat's approach to hierarchy and grouping of concepts.
+:::
 
 ## General recommendations
 

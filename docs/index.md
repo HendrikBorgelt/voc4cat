@@ -1,5 +1,8 @@
 ---
 hide-toc: true
+myst:
+  html_meta:
+    "description lang=en": "Voc4Cat vocabulary for catalysis: docs, releases, RDF downloads, and why curated terms support FAIR data. Learn more here."
 ---
 
 # Welcome to Voc4Cat
@@ -51,7 +54,7 @@ Producing Voc4Cat-annotated data contributes to realising the vision of machine-
 ```
 
 +++
-<small>Latest release **v2025-05-22**</small>
+<small>Latest release **v2025-10-14**</small>
 :::
 ::::
 
@@ -83,7 +86,8 @@ For example, the compact URI of `https://w3id.org/nfdi4cat/voc4cat_0005001` is `
 
 ## All releases
 
-- **v2025-05-22**: [Documentation (HTML)](https://w3id.org/nfdi4cat/voc4cat/v2025-05-22), permanent url `https://w3id.org/nfdi4cat/voc4cat/v2024-05-22`
+- **v2025-10-14**: [Documentation (HTML)](https://w3id.org/nfdi4cat/voc4cat/v2025-10-14), permanent url `https://w3id.org/nfdi4cat/voc4cat/v2025-10-14`
+- **v2025-05-22**: [Documentation (HTML)](https://w3id.org/nfdi4cat/voc4cat/v2025-05-22), permanent url `https://w3id.org/nfdi4cat/voc4cat/v2025-05-22`
 - **v2024-12-17**: [Documentation (HTML)](https://w3id.org/nfdi4cat/voc4cat/v2024-12-17), permanent url `https://w3id.org/nfdi4cat/voc4cat/v2024-12-17`
 - **v2024-04-08**: [Documentation (HTML)](https://w3id.org/nfdi4cat/voc4cat/v2024-04-08), permanent url `https://w3id.org/nfdi4cat/voc4cat/v2024-04-08`
 - **v2023-09-03**: [Documentation (HTML)](https://w3id.org/nfdi4cat/voc4cat/v2023-09-03"), permanent url `https://w3id.org/nfdi4cat/voc4cat/v2023-09-03`
@@ -108,7 +112,9 @@ About <docs_usage/about>
 
 docs_usage/how-to-use
 docs_usage/how-to-contribute
+Organizing Concepts <docs_usage/organizing-concepts>
 docs_usage/guidelines
+Guidelines Publication <docs_usage/published-guidelines>
 ```
 
 ```{toctree}
@@ -117,12 +123,4 @@ docs_usage/guidelines
 :hidden:
 
 docs_maintenance/*
-```
-
-```{toctree}
-:caption: Guidelines (V2.0)
-:hidden:
-:maxdepth: 3
-
-All-in-one-page (as published) <docs_usage/published-guidelines-v2>
 ```

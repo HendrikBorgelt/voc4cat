@@ -1,7 +1,10 @@
 # Compile to requirements.txt with `pip-compile --upgrade requirements.in`
+# With uv: `uv pip compile --upgrade requirements.in -o requirements.txt`
 Sphinx
 myst-parser
 furo
 sphinx_inline_tabs
 sphinx-copybutton
 sphinx-design
+sphinx-sitemap
+sphinxcontrib-mermaid

@@ -9,6 +9,7 @@
 project = 'Voc4Cat'
 copyright = '2024, Voc4Cat contributors'
 author = 'David Linke, Nikolaos Moustakas, and Voc4Cat contributors'
+html_baseurl = 'https://nfdi4cat.github.io/voc4cat/'  # canonical base URL
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -20,8 +21,9 @@ extensions = [
     # External extensions
     "myst_parser",
     "sphinx_copybutton",
-    "sphinx_inline_tabs",
-    "sphinx_design",
+    "sphinx_design",  # design extensions like tabs/cards
+    "sphinxcontrib.mermaid",  # diagrams via MyST directive {mermaid}
+    "sphinx_sitemap",
 ]
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'README.md']
@@ -33,6 +35,7 @@ html_theme = 'furo'
 html_static_path = ['_static']
 html_favicon = '_static/favicon_32.png'
 html_last_updated_fmt = '%Y-%m-%d'
+html_extra_path = ['_extra']  # files to copy to output root
 
 # -- Options for todo extension -----------------------------------
 # https://www.sphinx-doc.org/en/master/usage/extensions/todo.html#module-sphinx.ext.todo
@@ -50,9 +53,18 @@ autosectionlabel_prefix_document = True
 
 myst_enable_extensions = [
     "attrs_inline", # enable {}-attribute syntax like ![](img/fish.png){w=100px align=center}
-    "colon_fence",  # enable the colon_fence ::: syntax for admonitions
+    "colon_fence",  # required for ::: tab-set / tab-item and admonitions syntax
     "html_image",   # convert HTML <img> elements to sphinx image nodes
 ]
+
+# generate slug anchors for headings (levels 1..3) so fragment links resolve
+myst_heading_anchors = 3
+
+# -- Options for sitemap extension -------------------------------------------
+# https://sphinx-sitemap.readthedocs.io/en/latest/configuration.html
+sitemap_url_scheme = "{link}"  # use html_baseurl as is, without language code prefix
+sitemap_show_lastmod = True
+sitemap_indent = 2
 
 # -- Options for Furo theme ---------------------------------------------------
 # https://pradyunsg.me/furo/customisation/
@@ -89,5 +101,8 @@ html_theme_options = {
         },
     ],
     # HTML to be show in a announcement banner at the top of the page
-    "announcement": 'New: <strong> Release 2025-05-22 </strong> includes the most frequently used keywords from ChemCatChem Journal.',
+    "announcement":
+        '<em>News: Voc4Cat is available via <a class="reference external" href="https://semanticlookup.zbmed.de/skosmos/voc4cat/en/">Skosmos</a>'
+        ' at ZB MED thanks to a <a class="reference external" href="https://terminology.services.base4nfdi.de/incubators">TS4NFDI incubator</a> project.'
+        ' (2025-11-09) </em>',
 }
